@@ -1,0 +1,9 @@
+path: /home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset
+train: images/train
+val: images/test
+nc: 4
+names:
+  0: cat1
+  1: cat2
+  2: cat4
+  3: cat5

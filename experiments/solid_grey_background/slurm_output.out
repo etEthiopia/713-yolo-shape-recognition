@@ -1,0 +1,63 @@
+==========================================
+YOLO Solid Grey Background Experiment
+==========================================
+Job ID: 2458
+Job running on node: ops01.cs.uregina.ca
+Using GPU: 0
+Start time: Thu May 28 23:09:56 CST 2026
+
+Activating virtual environment...
+
+Checking GPU availability...
+CUDA available: False
+GPU device: None
+
+==========================================
+Phase 4: Training (200 epochs)
+==========================================
+======================================================================
+YOLOv8 Shape Recognition Training
+======================================================================
+
+Configuration:
+  Dataset config: /home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/config/shapes.yaml
+  Pretrained model: yolov8n.pt
+  Device: cuda:0
+  Epochs: 200
+  Batch size: 16
+  Image size: 640
+  Output: experiments/solid_grey_background/training/run_1
+
+Loading pretrained model: yolov8n.pt
+Note: First run will download pretrained weights (may take a few minutes)
+
+Starting training...
+----------------------------------------------------------------------
+Ultralytics 8.4.56 🚀 Python-3.12.3 torch-2.12.0+cu130 
+
+==========================================
+Phase 5: Evaluation
+==========================================
+======================================================================
+Phase 5: Comprehensive Evaluation
+======================================================================
+
+Loading model: experiments/solid_grey_background/training/run_1/weights/best.pt
+
+==========================================
+Phase 6: Documentation
+==========================================
+======================================================================
+Phase 6: Generate Documentation
+======================================================================
+
+==========================================
+Experiment Complete!
+==========================================
+End time: Thu May 28 23:10:19 CST 2026
+
+Results saved to: experiments/solid_grey_background/
+Main report: experiments/solid_grey_background/EXPERIMENT_REPORT.md
+Model weights: experiments/solid_grey_background/training/run_1/weights/best.pt
+Evaluation: experiments/solid_grey_background/evaluation/
+
