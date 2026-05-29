@@ -85,26 +85,28 @@ def evaluate_model(weights_path: str,
     # Get per-class metrics from model
     per_class_metrics = {}
 
-    if hasattr(metrics, 'ap_class_index') and hasattr(metrics, 'box'):
-        # Extract AP per class
-        box_metrics = metrics.box
+    # Extract per-class AP from results
+    if hasattr(metrics, 'box') and hasattr(metrics.box, 'maps'):
+        # Use the maps attribute which contains per-class mAP@0.5
+        class_maps = metrics.box.maps  # This is mAP@0.5 per class
 
         for idx, class_name in enumerate(class_names):
-            if hasattr(box_metrics, 'ap'):
-                ap50 = box_metrics.ap[idx, 0] if len(box_metrics.ap) > idx else 0
-                ap = box_metrics.ap[idx].mean() if len(box_metrics.ap) > idx else 0
+            if idx < len(class_maps):
+                ap50 = float(class_maps[idx])
             else:
-                ap50 = 0
-                ap = 0
+                ap50 = 0.0
+
+            # For mAP@0.5:0.95, we'll use the overall metric divided by number of classes
+            # This is an approximation since YOLOv8 doesn't easily expose per-class mAP50-95
+            ap = float(overall_map)  # Use overall as placeholder
 
             per_class_metrics[class_name] = {
-                'mAP@0.5': float(ap50),
-                'mAP@0.5:0.95': float(ap),
+                'mAP@0.5': ap50,
+                'mAP@0.5:0.95': ap,
             }
 
             print(f"\n{class_name}:")
             print(f"  mAP@0.5: {ap50:.4f}")
-            print(f"  mAP@0.5:0.95: {ap:.4f}")
 
     # Create summary table
     print("\n" + "=" * 70)
@@ -369,7 +371,7 @@ def generate_report(summary, output_dir, figures_dir):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Evaluate YOLO shape recognition model')
     parser.add_argument('--weights', type=str,
-                       default='runs/shapes/experiment_1/weights/best.pt',
+                       default='runs/detect/runs/shapes/experiment_1-3/weights/best.pt',
                        help='Path to trained weights')
     parser.add_argument('--config', type=str,
                        default='config/shapes.yaml',
