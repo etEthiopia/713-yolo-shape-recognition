@@ -1,0 +1,19 @@
+# YOLO Dataset Configuration for Shape Recognition
+
+# Absolute path to dataset directory
+path: /Users/dagmawi.wube/Documents/School/Courses/713_Applied_ML/713-yolo-shape-recognition/dataset
+
+# Relative paths from 'path'
+train: images/train
+val: images/test
+
+# Number of classes
+nc: 5
+
+# Class names
+names:
+  0: cat1  # Synthetic - unconstrained (max entropy curvature)
+  1: cat2  # Synthetic - local matched variance
+  2: cat3  # Synthetic - local matched skew/kurtosis
+  3: cat4  # Synthetic - local matched all stats
+  4: cat5  # Natural - animal silhouettes

@@ -1,0 +1,34 @@
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+ENV/
+
+# Dataset and generated files
+dataset/
+runs/
+results/
+
+# Model weights
+*.pt
+*.weights
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
