@@ -1,0 +1,246 @@
+==========================================
+YOLO Solid Grey Background Experiment
+==========================================
+Job ID: 2462
+Job running on node: ops01.cs.uregina.ca
+Using GPU: 0
+Start time: Fri May 29 06:54:01 CST 2026
+
+Activating virtual environment...
+
+Checking GPU availability...
+CUDA available: False
+GPU device: None
+
+==========================================
+Phase 5: Evaluation
+==========================================
+======================================================================
+Phase 5: Comprehensive Evaluation
+======================================================================
+
+Loading model: experiments/solid_grey_background/training/run_1/weights/best.pt
+
+Running validation...
+Ultralytics 8.4.56 🚀 Python-3.12.3 torch-2.12.0+cu130 CPU (QEMU Virtual CPU version 2.5+)
+Model summary (fused): 73 layers, 3,006,428 parameters, 0 gradients, 8.1 GFLOPs
+[34m[1mval: [0mFast image access ✅ (ping: 0.3±0.0 ms, read: 42.8±10.8 MB/s, size: 24.3 KB)
+[K[34m[1mval: [0mScanning /home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/labels/test.cache... 250 images, 0 backgrounds, 152 corrupt: 100% ━━━━━━━━━━━━ 250/250 19.4Mit/s 0.0s
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0000.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0001.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0002.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0003.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0007.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0008.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0009.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0015.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0016.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0018.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0019.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0020.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0021.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0022.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0024.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0025.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0029.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0030.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0031.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0032.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0033.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0034.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0035.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0037.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0039.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0042.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0043.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0044.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0045.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0046.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0049.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0050.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0051.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0056.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0058.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0059.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0061.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0062.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0063.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0064.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0065.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0069.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0070.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0071.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0072.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0073.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0075.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0076.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0077.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0078.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0081.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0083.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0084.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0085.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0087.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0091.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0093.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0095.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0097.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0099.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0102.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0104.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0106.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0107.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0108.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0109.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0110.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0111.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0113.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0114.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0115.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0116.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0117.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0118.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0120.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0121.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0122.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0123.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0124.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0125.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0126.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0127.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0128.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0129.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0130.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0132.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0133.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0134.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0135.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0137.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0139.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0141.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0143.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0144.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0145.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0149.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0152.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0153.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0155.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0156.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0158.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0161.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0162.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0163.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0164.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0168.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0170.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0172.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0174.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0177.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0178.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0179.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0180.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0181.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0182.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0186.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0188.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0191.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0192.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0194.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0199.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0200.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0203.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0205.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0207.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0208.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0210.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0212.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0213.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0214.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0215.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0216.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0217.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0218.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0219.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0221.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0223.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0225.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0226.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0227.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0230.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0232.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0233.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0234.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0235.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0236.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0237.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0238.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0243.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0245.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0247.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[34m[1mval: [0m/home/dnw698/713-yolo-shape-recognition/experiments/solid_grey_background/dataset/images/test/test_0248.jpg: ignoring corrupt image/label: Label class 4 exceeds dataset class count 4. Possible class labels are 0-3
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 14% ━╸────────── 1/7 3.0s/it 0.9s<18.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 29% ━━━───────── 2/7 1.6s/it 1.6s<7.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 43% ━━━━━─────── 3/7 1.2s/it 2.4s<4.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 57% ━━━━━━╸───── 4/7 1.0it/s 3.1s<3.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 71% ━━━━━━━━╸─── 5/7 1.1it/s 3.9s<1.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 86% ━━━━━━━━━━── 6/7 1.2it/s 4.6s<0.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 7/7 1.5it/s 4.7s
+                   all         98        291      0.953       0.96       0.96      0.825
+                  cat1         66         99          1          1      0.995      0.861
+                  cat2         62         96       0.86          1      0.979      0.836
+                  cat5         64         96          1      0.881      0.905      0.778
+Speed: 1.9ms preprocess, 40.8ms inference, 0.0ms loss, 0.6ms postprocess per image
+Saving /home/dnw698/713-yolo-shape-recognition/runs/detect/val/predictions.json...
+Results saved to [1m/home/dnw698/713-yolo-shape-recognition/runs/detect/val[0m
+
+Overall Metrics:
+  mAP@0.5: 0.9595
+  mAP@0.5:0.95: 0.8251
+  Precision: 0.9533
+  Recall: 0.9602
+
+Per-Category Metrics:
+  cat1: mAP@0.5 = 0.8609
+  cat2: mAP@0.5 = 0.8364
+  cat4: mAP@0.5 = 0.8251
+  cat5: mAP@0.5 = 0.7781
+
+Running statistical tests...
+✓ Metrics saved: experiments/solid_grey_background/evaluation/metrics_comprehensive.json
+
+Generating visualizations...
+  ✓ mAP_by_category.png
+  ✓ synthetic_vs_natural.png
+
+  Generating sample predictions...
+  ✓ sample_predictions.png
+
+======================================================================
+Evaluation Complete!
+======================================================================
+
+Outputs:
+  Metrics: experiments/solid_grey_background/evaluation/metrics_comprehensive.json
+  Figures: experiments/solid_grey_background/evaluation/figures/ (3 files)
+
+==========================================
+Phase 6: Documentation
+==========================================
+======================================================================
+Phase 6: Generate Documentation
+======================================================================
+✓ Report generated: experiments/solid_grey_background/EXPERIMENT_REPORT.md
+✓ README generated: experiments/solid_grey_background/README.md
+
+======================================================================
+Documentation Complete!
+======================================================================
+
+Generated:
+  - experiments/solid_grey_background/EXPERIMENT_REPORT.md
+  - experiments/solid_grey_background/README.md
+
+==========================================
+Experiment Complete!
+==========================================
+End time: Fri May 29 06:54:23 CST 2026
+
+Results saved to: experiments/solid_grey_background/
+Main report: experiments/solid_grey_background/EXPERIMENT_REPORT.md
+Model weights: experiments/solid_grey_background/training/run_1/weights/best.pt
+Evaluation: experiments/solid_grey_background/evaluation/
+

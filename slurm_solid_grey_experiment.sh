@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # --- SLURM CONFIGURATION ---
-#SBATCH --job-name=yolo_solid_grey
-#SBATCH --output=experiments/solid_grey_background/slurm_output.out
-#SBATCH --error=experiments/solid_grey_background/slurm_error.err
+#SBATCH --job-name=yolo_solid_grey_ev
+#SBATCH --output=experiments/solid_grey_background/slurm_output_ev.out
+#SBATCH --error=experiments/solid_grey_background/slurm_error_ev.err
 #SBATCH --partition=gpugrp1        # GPU partition
 #SBATCH --gres=gpu:1               # Request 1 GPU
 #SBATCH --ntasks=1                 # Single task
@@ -66,20 +66,19 @@ python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}'); 
 #     --shapes-range 2 7 \
 #     --seed 42
 
-echo ""
-echo "=========================================="
-echo "Phase 4: Training (200 epochs)"
-echo "=========================================="
-python scripts/train_yolo.py \
-    --config experiments/solid_grey_background/config/shapes.yaml \
-    --model yolov8n.pt \
-    --epochs 200 \
-    --batch 16 \
-    --img-size 640 \
-    --device cuda:0 \
-    --project experiments/solid_grey_background/training \
-    --name run_1 \
-    --patience 50
+# echo ""
+# echo "=========================================="
+# echo "Phase 4: Training (200 epochs)"
+# echo "=========================================="
+# python scripts/train_yolo.py \
+#     --config experiments/solid_grey_background/config/shapes.yaml \
+#     --model yolov8n.pt \
+#     --epochs 100 \
+#     --batch 16 \
+#     --img-size 640 \
+#     --project experiments/solid_grey_background/training \
+#     --name run_1 \
+#     --patience 50
 
 echo ""
 echo "=========================================="
