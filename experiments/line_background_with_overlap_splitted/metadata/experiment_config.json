@@ -1,0 +1,112 @@
+{
+  "experiment_name": "Line Background with Overlap (Shape-Split)",
+  "description": "YOLO shape recognition with controlled overlap (25-75% visibility) AND strict shape-level train/test separation",
+  "categories": [
+    "cat1",
+    "cat2",
+    "cat4",
+    "cat5"
+  ],
+  "excluded_categories": [
+    "cat3"
+  ],
+  "rationale": "Test YOLO performance under occlusion with controlled overlap constraints AND eliminate shape-level data leakage",
+  "shape_split": {
+    "enabled": true,
+    "train_ratio": 0.8,
+    "test_ratio": 0.2,
+    "train_shapes_per_category": 312,
+    "test_shapes_per_category": 78,
+    "total_train_shapes": 1248,
+    "total_test_shapes": 312,
+    "guarantee": "Zero overlap between train and test shape pools"
+  },
+  "class_mapping": {
+    "cat1": 0,
+    "cat2": 1,
+    "cat4": 2,
+    "cat5": 3
+  },
+  "parameters": {
+    "shapes_per_image_range": [
+      2,
+      7
+    ],
+    "background_color": "striped lines (4 colors, 4 orientations)",
+    "train_images": 1000,
+    "test_images": 250,
+    "image_size": 640,
+    "epochs": 50,
+    "batch_size": 16,
+    "model": "yolov8n.pt",
+    "random_seed": 42
+  },
+  "overlap_config": {
+    "enabled": true,
+    "overlap_percentage": 0.5,
+    "overlap_pattern": "chain",
+    "visibility_constraint": {
+      "min_visible_ratio": 0.25,
+      "max_visible_ratio": 0.75,
+      "applies_to": "occluded_shape",
+      "description": "Occluded shapes must have 25-75% visible area"
+    },
+    "metadata_tracking": {
+      "per_image_json": true,
+      "tracks": [
+        "total_area",
+        "visible_area",
+        "occluded_area",
+        "visibility_ratio",
+        "overlaps_with",
+        "overlap_type"
+      ]
+    }
+  },
+  "color_scheme": {
+    "cat1": {
+      "display_name": "Unconstrained",
+      "hex": "#00AADC",
+      "rgb": [
+        0,
+        170,
+        220
+      ]
+    },
+    "cat2": {
+      "display_name": "Local (Var)",
+      "hex": "#00539B",
+      "rgb": [
+        0,
+        83,
+        155
+      ]
+    },
+    "cat4": {
+      "display_name": "Local (Matched)",
+      "hex": "#7F2F8D",
+      "rgb": [
+        127,
+        47,
+        141
+      ]
+    },
+    "cat5": {
+      "display_name": "Natural",
+      "hex": "#B01F23",
+      "rgb": [
+        176,
+        31,
+        35
+      ]
+    }
+  },
+  "directory_structure": {
+    "dataset": "Generated images and YOLO labels",
+    "dataset/overlap": "Per-image overlap metadata (JSON)",
+    "config": "YOLO configuration",
+    "training": "Model weights and training logs",
+    "evaluation": "Metrics and visualizations",
+    "metadata": "Experiment parameters"
+  }
+}

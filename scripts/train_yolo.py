@@ -14,7 +14,7 @@ import torch
 
 def train_yolo(config_path: str,
                model_name: str = 'yolov8n.pt',
-               epochs: int = 150,
+               epochs: int = 50,
                batch_size: int = 16,
                img_size: int = 640,
                device: str = None,

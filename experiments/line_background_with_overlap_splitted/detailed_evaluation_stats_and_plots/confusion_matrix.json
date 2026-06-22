@@ -1,0 +1,99 @@
+{
+  "confusion_matrix": [
+    [
+      183,
+      0,
+      0,
+      0,
+      43
+    ],
+    [
+      0,
+      185,
+      0,
+      0,
+      75
+    ],
+    [
+      0,
+      0,
+      160,
+      0,
+      111
+    ],
+    [
+      0,
+      0,
+      0,
+      180,
+      66
+    ],
+    [
+      3,
+      23,
+      3,
+      15,
+      0
+    ]
+  ],
+  "row_labels": [
+    "Unconstrained",
+    "Local: Match Variance",
+    "Local: Match All",
+    "Natural",
+    "Background\n(False Positive)"
+  ],
+  "column_labels": [
+    "Unconstrained",
+    "Local: Match Variance",
+    "Local: Match All",
+    "Natural",
+    "Background\n(Missed)"
+  ],
+  "per_category_metrics": {
+    "cat1": {
+      "display_name": "Unconstrained",
+      "true_positives": 183,
+      "false_positives": 3,
+      "false_negatives": 43,
+      "true_negatives": 818,
+      "precision": 0.9838709677419355,
+      "recall": 0.8097345132743363,
+      "f1_score": 0.8883495145631068,
+      "support": 226
+    },
+    "cat2": {
+      "display_name": "Local: Match Variance",
+      "true_positives": 185,
+      "false_positives": 23,
+      "false_negatives": 75,
+      "true_negatives": 764,
+      "precision": 0.8894230769230769,
+      "recall": 0.7115384615384616,
+      "f1_score": 0.7905982905982907,
+      "support": 260
+    },
+    "cat4": {
+      "display_name": "Local: Match All",
+      "true_positives": 160,
+      "false_positives": 3,
+      "false_negatives": 111,
+      "true_negatives": 773,
+      "precision": 0.9815950920245399,
+      "recall": 0.5904059040590406,
+      "f1_score": 0.7373271889400921,
+      "support": 271
+    },
+    "cat5": {
+      "display_name": "Natural",
+      "true_positives": 180,
+      "false_positives": 15,
+      "false_negatives": 66,
+      "true_negatives": 786,
+      "precision": 0.9230769230769231,
+      "recall": 0.7317073170731707,
+      "f1_score": 0.8163265306122449,
+      "support": 246
+    }
+  }
+}

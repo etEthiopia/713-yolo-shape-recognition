@@ -1,0 +1,14 @@
+path: /Users/dagmawi.wube/Documents/School/Courses/713_Applied_ML/713-yolo-shape-recognition/experiments/line_background_with_overlap_splitted/dataset
+train: images/train
+val: images/test
+nc: 4
+names:
+  0: cat1
+  1: cat2
+  2: cat4
+  3: cat5
+'# Category Mapping': Sequential IDs 0-3
+'# Class 0': cat1 - Unconstrained
+'# Class 1': cat2 - Local (Var)
+'# Class 2': cat4 - Local (Matched)
+'# Class 3': cat5 - Natural
