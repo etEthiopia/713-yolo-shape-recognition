@@ -330,7 +330,7 @@ The study represents the **first application of maximum-entropy visual stimuli t
 - **LHQ-1024 Dataset**: Natural scene backgrounds
 
 ## Paper
-[Google Drive Link]([https://docs.ultralytics.com/](https://drive.google.com/file/d/13jGpM-6ONYDyiBopzCmPegZ7H5JwX_C7/view?usp=sharing ))
+[Google Drive Link](https://drive.google.com/file/d/13jGpM-6ONYDyiBopzCmPegZ7H5JwX_C7/view?usp=sharing)
 
 
 ## Citation
