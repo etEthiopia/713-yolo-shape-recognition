@@ -329,6 +329,10 @@ The study represents the **first application of maximum-entropy visual stimuli t
 - **Ultralytics YOLOv8**: [https://docs.ultralytics.com/](https://docs.ultralytics.com/)
 - **LHQ-1024 Dataset**: Natural scene backgrounds
 
+## Paper
+[Google Drive Link]([https://docs.ultralytics.com/](https://drive.google.com/file/d/13jGpM-6ONYDyiBopzCmPegZ7H5JwX_C7/view?usp=sharing ))
+
+
 ## Citation
 
 If you use this work, please cite:
@@ -336,7 +340,7 @@ If you use this work, please cite:
 ```bibtex
 @article{wube2026yolo,
   title={Can YOLO Learn Statistical Curvature Properties of Synthetic Shape Stimuli?},
-  author={Wube, Dagmawi},
+  author={Wube, Dagmawi N},
   journal={CS 713 Applied Machine Learning},
   year={2026},
   institution={University of Regina}
