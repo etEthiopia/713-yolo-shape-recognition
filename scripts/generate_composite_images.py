@@ -186,9 +186,14 @@ def bbox_to_yolo_format(bbox: Tuple[int, int, int, int],
 
 def generate_composite_image(shapes_dict: Dict[str, List[str]],
                              img_size: int = 640,
-                             num_shapes_range: Tuple[int, int] = (2, 5)) -> Tuple[np.ndarray, List[Tuple[int, float, float, float, float]]]:
+                             shapes_range: Tuple[int, int] = (2, 5)) -> Tuple[np.ndarray, List[Tuple[int, float, float, float, float]]]:
     """
     Generate one composite image with multiple shapes.
+
+    Args:
+        shapes_dict: Dictionary mapping category names to lists of shape paths
+        img_size: Size of square image (default: 640)
+        shapes_range: Tuple of (min_shapes, max_shapes) per image (default: (2, 5))
 
     Returns:
         (image, labels): labels is list of (class_id, x_center, y_center, width, height)
@@ -197,7 +202,7 @@ def generate_composite_image(shapes_dict: Dict[str, List[str]],
     canvas = np.full((img_size, img_size), 128, dtype=np.uint8)
 
     # Random number of shapes
-    num_shapes = random.randint(*num_shapes_range)
+    num_shapes = random.randint(*shapes_range)
 
     labels = []
     existing_boxes = []
@@ -245,6 +250,7 @@ def generate_dataset(shapes_json: str,
                      num_train: int = 500,
                      num_test: int = 125,
                      img_size: int = 640,
+                     shapes_range: Tuple[int, int] = (2, 5),
                      seed: int = 42):
     """
     Generate complete YOLO dataset.
@@ -255,6 +261,7 @@ def generate_dataset(shapes_json: str,
         num_train: Number of training images
         num_test: Number of test images
         img_size: Image size (square)
+        shapes_range: Tuple of (min_shapes, max_shapes) per image
         seed: Random seed for reproducibility
     """
     random.seed(seed)
@@ -281,9 +288,9 @@ def generate_dataset(shapes_json: str,
     category_distribution = {f'cat{i}': 0 for i in range(1, 6)}
 
     # Generate training set
-    print(f"\nGenerating {num_train} training images...")
+    print(f"\nGenerating {num_train} training images (shapes per image: {shapes_range[0]}-{shapes_range[1]})...")
     for i in range(num_train):
-        img, labels = generate_composite_image(shapes_dict, img_size)
+        img, labels = generate_composite_image(shapes_dict, img_size, shapes_range)
 
         # Save image
         img_path = output_path / 'images' / 'train' / f'train_{i:04d}.jpg'
@@ -302,9 +309,9 @@ def generate_dataset(shapes_json: str,
     print(f"✓ Training set complete: {num_train} images")
 
     # Generate test set
-    print(f"\nGenerating {num_test} test images...")
+    print(f"\nGenerating {num_test} test images (shapes per image: {shapes_range[0]}-{shapes_range[1]})...")
     for i in range(num_test):
-        img, labels = generate_composite_image(shapes_dict, img_size)
+        img, labels = generate_composite_image(shapes_dict, img_size, shapes_range)
 
         # Save image
         img_path = output_path / 'images' / 'test' / f'test_{i:04d}.jpg'
@@ -353,6 +360,9 @@ if __name__ == '__main__':
                        help='Number of test images')
     parser.add_argument('--img-size', type=int, default=640,
                        help='Image size (square)')
+    parser.add_argument('--shapes-range', type=int, nargs=2, default=[2, 5],
+                       metavar=('MIN', 'MAX'),
+                       help='Range of shapes per image (e.g., --shapes-range 2 7)')
     parser.add_argument('--seed', type=int, default=42,
                        help='Random seed')
 
@@ -364,11 +374,15 @@ if __name__ == '__main__':
     shapes_json = PROJECT_DIR / args.shapes_json
     output_dir = PROJECT_DIR / args.output_dir
 
+    # Convert shapes_range to tuple
+    shapes_range = tuple(args.shapes_range)
+
     generate_dataset(
         shapes_json=str(shapes_json),
         output_dir=str(output_dir),
         num_train=args.num_train,
         num_test=args.num_test,
         img_size=args.img_size,
+        shapes_range=shapes_range,
         seed=args.seed
     )

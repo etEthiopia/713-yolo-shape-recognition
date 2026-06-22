@@ -14,7 +14,7 @@ import torch
 
 def train_yolo(config_path: str,
                model_name: str = 'yolov8n.pt',
-               epochs: int = 50,
+               epochs: int = 10,
                batch_size: int = 16,
                img_size: int = 640,
                device: str = None,
@@ -130,7 +130,7 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=str, default='yolov8n.pt',
                        choices=['yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', 'yolov8l.pt', 'yolov8x.pt'],
                        help='Pretrained model size')
-    parser.add_argument('--epochs', type=int, default=150,
+    parser.add_argument('--epochs', type=int, default=10,
                        help='Number of training epochs')
     parser.add_argument('--batch', type=int, default=16,
                        help='Batch size')

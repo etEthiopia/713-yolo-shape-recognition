@@ -1,0 +1,60 @@
+/var/lib/slurm/slurmd/job02461/slurm_script: line 33: venv/bin/activate: No such file or directory
+/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:187: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py:187: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/polars/_cpu_check.py:271: RuntimeWarning: Missing required CPU features.
+
+The following required CPU features were not detected:
+    pclmulqdq
+Continuing to use this version of Polars on this processor will likely result in a crash.
+Install `polars[rtcompat]` instead of `polars` to run Polars with better compatibility.
+
+Hint: If you are on an Apple ARM machine (e.g. M1) this is likely due to running Python under Rosetta.
+It is recommended to install a native version of Python that does not run under Rosetta x86-64 emulation.
+
+If you believe this warning to be a false positive, you can set the `POLARS_SKIP_CPU_CHECK` environment variable to bypass this check.
+
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/dnw698/713-yolo-shape-recognition/scripts/experiments/phase5_evaluate_comprehensive.py", line 265, in <module>
+    evaluate_model(
+  File "/home/dnw698/713-yolo-shape-recognition/scripts/experiments/phase5_evaluate_comprehensive.py", line 52, in evaluate_model
+    model = YOLO(weights_path)
+            ^^^^^^^^^^^^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/ultralytics/models/yolo/model.py", line 78, in __init__
+    super().__init__(model=model, task=task, verbose=verbose)
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/ultralytics/engine/model.py", line 144, in __init__
+    self._load(model, task=task)
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/ultralytics/engine/model.py", line 283, in _load
+    self.model, self.ckpt = load_checkpoint(weights)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/ultralytics/nn/tasks.py", line 1615, in load_checkpoint
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/ultralytics/nn/tasks.py", line 1544, in torch_safe_load
+    ckpt = _load()
+           ^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/ultralytics/nn/tasks.py", line 1541, in _load
+    return torch_load(file, map_location="cpu")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/ultralytics/utils/patches.py", line 181, in torch_load
+    return torch.load(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/torch/serialization.py", line 1530, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/torch/serialization.py", line 795, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dnw698/713-yolo-shape-recognition/.venv/lib/python3.12/site-packages/torch/serialization.py", line 776, in __init__
+    super().__init__(open(name, mode))  # noqa: SIM115
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/solid_grey_background/training/run_1/weights/best.pt'
+Traceback (most recent call last):
+  File "/home/dnw698/713-yolo-shape-recognition/scripts/experiments/phase6_generate_report.py", line 204, in <module>
+    generate_report(args.experiment_dir)
+  File "/home/dnw698/713-yolo-shape-recognition/scripts/experiments/phase6_generate_report.py", line 26, in generate_report
+    with open(metrics_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/solid_grey_background/evaluation/metrics_comprehensive.json'

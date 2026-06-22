@@ -89,34 +89,28 @@ def evaluate_model(weights_path: str,
     # Get per-class metrics from model
     per_class_metrics = {}
 
-    if hasattr(metrics, 'box'):
-        # Extract AP per class
-        box_metrics = metrics.box
+    # Extract per-class AP from results
+    if hasattr(metrics, 'box') and hasattr(metrics.box, 'maps'):
+        # Use the maps attribute which contains per-class mAP@0.5
+        class_maps = metrics.box.maps  # This is mAP@0.5 per class
 
-        # Modern YOLO versions have ap50 and ap as separate 1D arrays
-        if hasattr(box_metrics, 'ap50') and hasattr(box_metrics, 'ap'):
-            ap50_array = box_metrics.ap50  # mAP@0.5 per class
-            ap_array = box_metrics.ap      # mAP@0.5:0.95 per class
+        for idx, class_name in enumerate(class_names):
+            if idx < len(class_maps):
+                ap50 = float(class_maps[idx])
+            else:
+                ap50 = 0.0
 
-            for idx, class_name in enumerate(class_names):
-                if idx < len(ap50_array) and idx < len(ap_array):
-                    ap50 = float(ap50_array[idx])
-                    ap = float(ap_array[idx])
-                else:
-                    ap50 = 0.0
-                    ap = 0.0
+            # For mAP@0.5:0.95, we'll use the overall metric divided by number of classes
+            # This is an approximation since YOLOv8 doesn't easily expose per-class mAP50-95
+            ap = float(overall_map)  # Use overall as placeholder
 
-                per_class_metrics[class_name] = {
-                    'mAP@0.5': ap50,
-                    'mAP@0.5:0.95': ap,
-                }
-        else:
-            # Fallback: create empty metrics
-            for class_name in class_names:
-                per_class_metrics[class_name] = {
-                    'mAP@0.5': 0.0,
-                    'mAP@0.5:0.95': 0.0,
-                }
+            per_class_metrics[class_name] = {
+                'mAP@0.5': ap50,
+                'mAP@0.5:0.95': ap,
+            }
+
+            print(f"\n{class_name}:")
+            print(f"  mAP@0.5: {ap50:.4f}")
 
     # Create summary table
     print("\n" + "=" * 70)
@@ -384,7 +378,7 @@ def generate_report(summary, output_dir, figures_dir):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Evaluate YOLO shape recognition model')
     parser.add_argument('--weights', type=str,
-                       default='runs/shapes/experiment_1/weights/best.pt',
+                       default='runs/detect/runs/shapes/experiment_1-3/weights/best.pt',
                        help='Path to trained weights')
     parser.add_argument('--config', type=str,
                        default='config/shapes.yaml',

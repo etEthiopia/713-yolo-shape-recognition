@@ -13,7 +13,7 @@ import glob
 import os
 from pathlib import Path
 
-def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_category: int = 390):
+def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_category: int = 390, categories: list = None):
     """
     Randomly sample equal number of shapes from each category.
 
@@ -21,17 +21,27 @@ def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_categ
         shapes_dir: Path to Shapes directory containing cat1-5 folders
         output_json: Output path for JSON file
         samples_per_category: Number of shapes to sample per category (default: 390)
+        categories: List of categories to include (e.g., ['cat1', 'cat2', 'cat4', 'cat5']). If None, includes all (cat1-5).
     """
     print("=" * 60)
     print("Creating Balanced Shape Dataset")
     print("=" * 60)
 
+    # Default to all categories if not specified
+    if categories is None:
+        categories = [f'cat{i}' for i in range(1, 6)]
+
+    print(f"\nCategories to include: {', '.join(categories)}")
+    excluded = [f'cat{i}' for i in range(1, 6) if f'cat{i}' not in categories]
+    if excluded:
+        print(f"Excluded categories: {', '.join(excluded)}")
+
     shapes_by_category = {}
     category_counts = {}
 
-    # Process each category
-    for cat_id in range(1, 6):
-        cat_dir = os.path.join(shapes_dir, f'cat{cat_id}')
+    # Process specified categories
+    for cat_name in categories:
+        cat_dir = os.path.join(shapes_dir, cat_name)
 
         # Get all PNG files
         all_shapes = sorted(glob.glob(os.path.join(cat_dir, 'img*.png')))
@@ -39,13 +49,13 @@ def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_categ
         if not all_shapes:
             raise ValueError(f"No images found in {cat_dir}")
 
-        category_counts[f'cat{cat_id}'] = len(all_shapes)
-        print(f"\nCategory {cat_id}: Found {len(all_shapes)} shapes")
+        category_counts[cat_name] = len(all_shapes)
+        print(f"\n{cat_name}: Found {len(all_shapes)} shapes")
 
         # Check if we have enough shapes
         if len(all_shapes) < samples_per_category:
             raise ValueError(
-                f"Category {cat_id} has only {len(all_shapes)} shapes, "
+                f"{cat_name} has only {len(all_shapes)} shapes, "
                 f"but {samples_per_category} requested"
             )
 
@@ -54,7 +64,7 @@ def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_categ
         selected = random.sample(all_shapes, samples_per_category)
 
         # Store as relative paths from project root
-        shapes_by_category[f'cat{cat_id}'] = selected
+        shapes_by_category[cat_name] = selected
         print(f"  → Sampled {len(selected)} shapes")
 
     # Create output directory if needed
@@ -66,7 +76,9 @@ def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_categ
         json.dump({
             'metadata': {
                 'samples_per_category': samples_per_category,
-                'total_shapes': samples_per_category * 5,
+                'total_shapes': samples_per_category * len(categories),
+                'categories_included': categories,
+                'categories_excluded': excluded,
                 'original_counts': category_counts,
                 'random_seed': 42
             },
@@ -77,9 +89,11 @@ def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_categ
     print(f"✓ Balanced dataset saved to: {output_json}")
     print("=" * 60)
     print(f"\nSummary:")
-    print(f"  Total categories: 5")
+    print(f"  Total categories: {len(categories)}")
     print(f"  Shapes per category: {samples_per_category}")
-    print(f"  Total selected shapes: {samples_per_category * 5}")
+    print(f"  Total selected shapes: {samples_per_category * len(categories)}")
+    if excluded:
+        print(f"  Excluded: {', '.join(excluded)}")
 
     # Verify
     with open(output_json, 'r') as f:
@@ -90,14 +104,32 @@ def create_balanced_dataset(shapes_dir: str, output_json: str, samples_per_categ
         print(f"  {cat}: {len(paths)} shapes")
 
 if __name__ == '__main__':
-    # Paths
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Create balanced shape dataset')
+    parser.add_argument('--shapes-dir', type=str, default='Shapes',
+                       help='Directory containing shape category folders')
+    parser.add_argument('--output-json', type=str, default='dataset/selected_shapes.json',
+                       help='Output JSON file path')
+    parser.add_argument('--samples-per-category', type=int, default=390,
+                       help='Number of shapes to sample per category')
+    parser.add_argument('--categories', nargs='+', default=None,
+                       help='Categories to include (e.g., cat1 cat2 cat4 cat5). Default: all')
+
+    args = parser.parse_args()
+
+    # Get project directory
     PROJECT_DIR = Path(__file__).parent.parent
-    SHAPES_DIR = PROJECT_DIR / 'Shapes'
-    OUTPUT_JSON = PROJECT_DIR / 'dataset' / 'selected_shapes.json'
+    shapes_dir = PROJECT_DIR / args.shapes_dir
+    output_json = PROJECT_DIR / args.output_json
+
+    # Create output directory if needed
+    output_json.parent.mkdir(parents=True, exist_ok=True)
 
     # Create balanced dataset
     create_balanced_dataset(
-        shapes_dir=str(SHAPES_DIR),
-        output_json=str(OUTPUT_JSON),
-        samples_per_category=390
+        shapes_dir=str(shapes_dir),
+        output_json=str(output_json),
+        samples_per_category=args.samples_per_category,
+        categories=args.categories
     )
