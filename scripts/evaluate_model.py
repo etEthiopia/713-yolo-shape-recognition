@@ -80,7 +80,11 @@ def evaluate_model(weights_path: str,
     print("Per-Category Metrics")
     print("=" * 70)
 
-    class_names = ['cat1', 'cat2', 'cat3', 'cat4', 'cat5']
+    # Load class names from config (supports variable number of classes)
+    import yaml
+    with open(config_path) as f:
+        config_data = yaml.safe_load(f)
+    class_names = [config_data['names'][i] for i in range(config_data['nc'])]
 
     # Get per-class metrics from model
     per_class_metrics = {}
@@ -184,12 +188,14 @@ def evaluate_model(weights_path: str,
     # 2. Synthetic vs Natural comparison
     fig, ax = plt.subplots(figsize=(8, 6))
 
-    synthetic_map = np.mean([per_class_metrics[f'cat{i}']['mAP@0.5']
-                            for i in range(1, 5)])
-    natural_map = per_class_metrics['cat5']['mAP@0.5']
+    # Calculate synthetic average (all cats except cat5)
+    synthetic_cats = [cat for cat in per_class_metrics.keys() if cat != 'cat5']
+    synthetic_map = np.mean([per_class_metrics[cat]['mAP@0.5']
+                            for cat in synthetic_cats])
+    natural_map = per_class_metrics['cat5']['mAP@0.5'] if 'cat5' in per_class_metrics else 0.0
 
     comparison_data = [synthetic_map, natural_map]
-    comparison_labels = ['Synthetic\n(cat1-4)', 'Natural\n(cat5)']
+    comparison_labels = [f'Synthetic\n({", ".join(synthetic_cats)})', 'Natural\n(cat5)']
 
     bars = ax.bar(comparison_labels, comparison_data,
                   color=['#4ECDC4', '#98D8C8'], alpha=0.8, edgecolor='black')
@@ -328,9 +334,10 @@ def generate_report(summary, output_dir, figures_dir):
         f.write("\n## Key Findings\n\n")
 
         # Calculate synthetic vs natural
-        synthetic_map = np.mean([summary['per_category'][f'cat{i}']['mAP@0.5']
-                                for i in range(1, 5)])
-        natural_map = summary['per_category']['cat5']['mAP@0.5']
+        synthetic_cats = [cat for cat in summary['per_category'].keys() if cat != 'cat5']
+        synthetic_map = np.mean([summary['per_category'][cat]['mAP@0.5']
+                                for cat in synthetic_cats])
+        natural_map = summary['per_category']['cat5']['mAP@0.5'] if 'cat5' in summary['per_category'] else 0.0
 
         f.write(f"1. **Synthetic shapes average mAP**: {synthetic_map:.4f}\n")
         f.write(f"2. **Natural shapes mAP**: {natural_map:.4f}\n")

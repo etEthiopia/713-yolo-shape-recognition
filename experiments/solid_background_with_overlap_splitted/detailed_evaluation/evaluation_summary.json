@@ -1,0 +1,133 @@
+{
+  "evaluation_info": {
+    "timestamp": "2026-06-01T15:43:59.358927",
+    "model_experiment": "solid_background_with_overlap_splitted",
+    "test_experiment": "solid_background_with_overlap_splitted",
+    "model_weights": "../experiments/solid_background_with_overlap_splitted/training/run_1/weights/best.pt",
+    "test_images_dir": "../experiments/solid_background_with_overlap_splitted/dataset/images/test",
+    "num_test_images": 250,
+    "conf_threshold": 0.5,
+    "iou_threshold": 0.5,
+    "is_cross_experiment": false
+  },
+  "metrics": {
+    "overall": {
+      "total_images": 250,
+      "total_ground_truth": 1011,
+      "total_predictions": 783,
+      "true_positives": 743,
+      "false_positives": 40,
+      "false_negatives": 268,
+      "precision": 0.9489144316730523,
+      "recall": 0.734915924826904,
+      "f1_score": 0.8283166109253065,
+      "images_with_overlap": 104,
+      "images_without_overlap": 146
+    },
+    "per_category": {
+      "cat1": {
+        "ground_truth": 218,
+        "predictions": 195,
+        "true_positives": 190,
+        "false_positives": 5,
+        "false_negatives": 28,
+        "precision": 0.9743589743589743,
+        "recall": 0.8715596330275229,
+        "f1_score": 0.9200968523002422
+      },
+      "cat2": {
+        "ground_truth": 260,
+        "predictions": 219,
+        "true_positives": 199,
+        "false_positives": 20,
+        "false_negatives": 61,
+        "precision": 0.908675799086758,
+        "recall": 0.7653846153846153,
+        "f1_score": 0.8308977035490605
+      },
+      "cat4": {
+        "ground_truth": 249,
+        "predictions": 153,
+        "true_positives": 151,
+        "false_positives": 2,
+        "false_negatives": 98,
+        "precision": 0.9869281045751634,
+        "recall": 0.606425702811245,
+        "f1_score": 0.7512437810945274
+      },
+      "cat5": {
+        "ground_truth": 284,
+        "predictions": 216,
+        "true_positives": 203,
+        "false_positives": 13,
+        "false_negatives": 81,
+        "precision": 0.9398148148148148,
+        "recall": 0.7147887323943662,
+        "f1_score": 0.812
+      }
+    },
+    "overlap_analysis": {
+      "with_overlap": {
+        "num_images": 104,
+        "precision": 0.9203187250996016,
+        "recall": 0.47925311203319504,
+        "f1_score": 0.6302864938608459
+      },
+      "without_overlap": {
+        "num_images": 146,
+        "precision": 0.9624060150375939,
+        "recall": 0.9678638941398866,
+        "f1_score": 0.9651272384542884
+      }
+    },
+    "confusion_matrix": [
+      [
+        190,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        199,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        151,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        203
+      ]
+    ],
+    "image_statistics": {
+      "precision": {
+        "mean": 0.9350285714285713,
+        "std": 0.18264206498018676,
+        "min": 0.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      "recall": {
+        "mean": 0.7705428571428571,
+        "std": 0.2936744462203203,
+        "min": 0.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      "f1_score": {
+        "mean": 0.8174392496392496,
+        "std": 0.24665068700936,
+        "min": 0.0,
+        "max": 1.0,
+        "median": 1.0
+      }
+    }
+  }
+}

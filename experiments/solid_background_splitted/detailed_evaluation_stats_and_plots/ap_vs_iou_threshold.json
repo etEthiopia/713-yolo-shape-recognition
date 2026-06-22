@@ -1,0 +1,161 @@
+{
+  "iou_thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "results": {
+    "0.5": {
+      "cat1": {
+        "display_name": "Unconstrained",
+        "color": "#00AADC",
+        "mean": 1.0,
+        "sem": 0.0,
+        "n": 163
+      },
+      "cat2": {
+        "display_name": "Local: Match Variance",
+        "color": "#00539B",
+        "mean": 0.9903225806451613,
+        "sem": 0.005550861189795353,
+        "n": 155
+      },
+      "cat4": {
+        "display_name": "Local: Match All",
+        "color": "#7F2F8D",
+        "mean": 0.9679054054054054,
+        "sem": 0.013828013199900163,
+        "n": 148
+      },
+      "cat5": {
+        "display_name": "Natural",
+        "color": "#B01F23",
+        "mean": 0.9841772151898734,
+        "sem": 0.008303781982314776,
+        "n": 158
+      }
+    },
+    "0.6": {
+      "cat1": {
+        "display_name": "Unconstrained",
+        "color": "#00AADC",
+        "mean": 1.0,
+        "sem": 0.0,
+        "n": 163
+      },
+      "cat2": {
+        "display_name": "Local: Match Variance",
+        "color": "#00539B",
+        "mean": 0.9854838709677419,
+        "sem": 0.006568381913258183,
+        "n": 155
+      },
+      "cat4": {
+        "display_name": "Local: Match All",
+        "color": "#7F2F8D",
+        "mean": 0.9656531531531533,
+        "sem": 0.013975089201994289,
+        "n": 148
+      },
+      "cat5": {
+        "display_name": "Natural",
+        "color": "#B01F23",
+        "mean": 0.9757383966244725,
+        "sem": 0.009562105347157804,
+        "n": 158
+      }
+    },
+    "0.7": {
+      "cat1": {
+        "display_name": "Unconstrained",
+        "color": "#00AADC",
+        "mean": 0.9938650306748467,
+        "sem": 0.0061349693251533735,
+        "n": 163
+      },
+      "cat2": {
+        "display_name": "Local: Match Variance",
+        "color": "#00539B",
+        "mean": 0.9661290322580646,
+        "sem": 0.012757079766901528,
+        "n": 155
+      },
+      "cat4": {
+        "display_name": "Local: Match All",
+        "color": "#7F2F8D",
+        "mean": 0.9521396396396398,
+        "sem": 0.016021623421012418,
+        "n": 148
+      },
+      "cat5": {
+        "display_name": "Natural",
+        "color": "#B01F23",
+        "mean": 0.9514767932489451,
+        "sem": 0.013983051111731565,
+        "n": 158
+      }
+    },
+    "0.8": {
+      "cat1": {
+        "display_name": "Unconstrained",
+        "color": "#00AADC",
+        "mean": 0.911042944785276,
+        "sem": 0.02128219940797432,
+        "n": 163
+      },
+      "cat2": {
+        "display_name": "Local: Match Variance",
+        "color": "#00539B",
+        "mean": 0.8758064516129033,
+        "sem": 0.023090983908793494,
+        "n": 155
+      },
+      "cat4": {
+        "display_name": "Local: Match All",
+        "color": "#7F2F8D",
+        "mean": 0.8434684684684686,
+        "sem": 0.027503379858422418,
+        "n": 148
+      },
+      "cat5": {
+        "display_name": "Natural",
+        "color": "#B01F23",
+        "mean": 0.8449367088607594,
+        "sem": 0.02618358837199421,
+        "n": 158
+      }
+    },
+    "0.9": {
+      "cat1": {
+        "display_name": "Unconstrained",
+        "color": "#00AADC",
+        "mean": 0.3057259713701432,
+        "sem": 0.03270069847286713,
+        "n": 163
+      },
+      "cat2": {
+        "display_name": "Local: Match Variance",
+        "color": "#00539B",
+        "mean": 0.2032258064516129,
+        "sem": 0.02842966724993681,
+        "n": 155
+      },
+      "cat4": {
+        "display_name": "Local: Match All",
+        "color": "#7F2F8D",
+        "mean": 0.26013513513513514,
+        "sem": 0.03394465894465895,
+        "n": 148
+      },
+      "cat5": {
+        "display_name": "Natural",
+        "color": "#B01F23",
+        "mean": 0.26160337552742613,
+        "sem": 0.03224898823485297,
+        "n": 158
+      }
+    }
+  }
+}

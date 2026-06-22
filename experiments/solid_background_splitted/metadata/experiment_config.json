@@ -1,0 +1,79 @@
+{
+  "experiment_name": "Solid Background",
+  "description": "YOLO shape recognition with 4 categories on solid grey background",
+  "categories": [
+    "cat1",
+    "cat2",
+    "cat4",
+    "cat5"
+  ],
+  "excluded_categories": [
+    "cat3"
+  ],
+  "rationale": "Excluding cat3 to focus on well-separated categories",
+  "class_mapping": {
+    "cat1": 0,
+    "cat2": 1,
+    "cat4": 2,
+    "cat5": 3
+  },
+  "parameters": {
+    "shapes_per_image_range": [
+      2,
+      7
+    ],
+    "background_color": "solid grey (128, 128, 128)",
+    "train_images": 1000,
+    "test_images": 250,
+    "image_size": 640,
+    "epochs": 50,
+    "batch_size": 16,
+    "model": "yolov8n.pt",
+    "random_seed": 42
+  },
+  "color_scheme": {
+    "cat1": {
+      "display_name": "Unconstrained",
+      "hex": "#00AADC",
+      "rgb": [
+        0,
+        170,
+        220
+      ]
+    },
+    "cat2": {
+      "display_name": "Local (Var)",
+      "hex": "#00539B",
+      "rgb": [
+        0,
+        83,
+        155
+      ]
+    },
+    "cat4": {
+      "display_name": "Local (Matched)",
+      "hex": "#7F2F8D",
+      "rgb": [
+        127,
+        47,
+        141
+      ]
+    },
+    "cat5": {
+      "display_name": "Natural",
+      "hex": "#B01F23",
+      "rgb": [
+        176,
+        31,
+        35
+      ]
+    }
+  },
+  "directory_structure": {
+    "dataset": "Generated images and YOLO labels",
+    "config": "YOLO configuration",
+    "training": "Model weights and training logs",
+    "evaluation": "Metrics and visualizations",
+    "metadata": "Experiment parameters"
+  }
+}
